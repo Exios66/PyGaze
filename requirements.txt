@@ -1,10 +1,9 @@
 # Core dependencies
 pygaze==1.2.2
-pygame==2.5.2; sys_platform != 'darwin'
-pygame==2.2.0; sys_platform == 'darwin'  # More stable for macOS
-numpy>=1.26.4
-Pillow>=10.1.0
-python-dateutil>=2.8.2
+pygame==2.2.0; sys_platform == 'darwin'  # Required for macOS compatibility
+numpy==1.26.4
+Pillow==10.1.0
+python-dateutil==2.8.2
 
 # Windows-specific (alternative webcam)
 opencv-python-headless>=4.8.0  # Recommended over VideoCapture
@@ -24,4 +23,9 @@ matplotlib>=3.8.0
 pyserial>=3.5
 
 # Modern Python
-typing-extensions>=4.8.0 
+typing-extensions>=4.8.0
+
+# Platform-specific SDL paths (add at end)
+--config-settings="--global-option=build_ext" \
+--config-settings="--global-option=-I/opt/homebrew/opt/sdl2/include" \
+--config-settings="--global-option=-L/opt/homebrew/opt/sdl2/lib" 

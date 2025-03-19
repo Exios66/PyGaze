@@ -31,6 +31,13 @@ class Settings(object):
             self.read_module(constants)
         except:
             pass
+        
+        # Add the osexperiment stub
+        try:
+            from openexp.experiment import experiment
+            self.config["osexperiment"] = experiment()
+        except:
+            self.config["osexperiment"] = None
             
     def read_module(self, mod):
         
