@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@types/node": "^22.13.10",
+    "@types/ws": "^8.18.0",
+    "express": "^4.21.2",
+    "ws": "^8.18.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
